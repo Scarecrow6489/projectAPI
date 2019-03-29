@@ -41,7 +41,7 @@ app.use(express.static('./dist/the_story_teller'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname,'/dist/the_story_teller/index.html'));
+res.sendFile(path.join(__dirname,'/dist/the_story_teller/src/index.html'));
 });
 
 // Start the app by listening on the default Heroku port

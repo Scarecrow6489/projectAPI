@@ -28,6 +28,7 @@
 
 
 
+console.log("adrak", __dirname +'\\src\\index.html');
 
 
 //Install express server
@@ -37,11 +38,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/the_story_teller'));
+app.use(express.static('.\\the_story_teller'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname,'/dist/the_story_teller/src/index.html'));
+res.sendFile(path.join(__dirname,'\\src\\index.html'));
 });
 
 // Start the app by listening on the default Heroku port
